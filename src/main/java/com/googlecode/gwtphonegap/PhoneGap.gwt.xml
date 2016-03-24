@@ -275,6 +275,17 @@
         </all>
     </replace-with>
 
+    <!-- Push -->
+    <replace-with class="com.googlecode.gwtphonegap.client.plugins.push.PushBrowserImpl">
+        <when-type-is class="com.googlecode.gwtphonegap.client.plugins.push.Push" />
+    </replace-with>
+    <replace-with class="com.googlecode.gwtphonegap.client.plugins.push.PushCordovaImpl">
+        <when-type-is class="com.googlecode.gwtphonegap.client.plugins.push.Push" />
+        <all>
+            <when-property-is name="phonegap.env" value="yes" />
+        </all>
+    </replace-with>
+
     <!-- Log -->
     <inherits name="com.google.gwt.logging.Logging"/>
     
