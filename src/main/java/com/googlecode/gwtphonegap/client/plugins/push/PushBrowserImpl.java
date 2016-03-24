@@ -27,4 +27,8 @@ public class PushBrowserImpl implements Push {
     public void initialize() {
     }
 
+    @Override
+    public void init(PushOptions options) {
+    }
+
 }

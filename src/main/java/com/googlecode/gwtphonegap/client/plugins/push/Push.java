@@ -30,4 +30,11 @@ import com.googlecode.gwtphonegap.client.plugins.PhoneGapPlugin;
  */
 public interface Push extends PhoneGapPlugin {
 
+    /**
+     * Initializes the plugin on the native side.
+     *
+     * @param options  see methods in {@link PushOptions}
+     */
+    public void init(PushOptions options);
+
 }

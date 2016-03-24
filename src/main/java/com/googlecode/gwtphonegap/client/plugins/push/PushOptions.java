@@ -23,4 +23,27 @@ import com.google.gwt.core.client.JavaScriptObject;
 public class PushOptions extends JavaScriptObject {
     protected PushOptions() {}
 
+    /**
+     *
+     * @param options  see methods in {@link AndroidOptions}
+     */
+    public final native void setAndroid(AndroidOptions options) /*-{
+        this.android = object;
+    }-*/;
+
+    /**
+     *
+     * @param options  see methods in {@link IosOptions}
+     */
+    public final native void setIos(IosOptions options) /*-{
+        this.ios = object;
+    }-*/;
+
+    /**
+     *
+     * @param options  see methods in {@link WindowsOptions}
+     */
+    public final native void setWindows(WindowsOptions options) /*-{
+        this.windows = options;
+    }-*/;
 }

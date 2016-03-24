@@ -18,35 +18,9 @@
 
 package com.googlecode.gwtphonegap.client.plugins.push;
 
-public class PushCordovaImpl implements Push {
+import com.google.gwt.core.client.JavaScriptObject;
 
-    private boolean initialized;
-
-    @Override
-    public void initialize() {
-        if (!testForPlugin()) {
-            throw new IllegalStateException("cannot find Push plugin - did you include push.js?");
-        }
-        initialized = true;
-    }
-
-    private native boolean testForPlugin() /*-{
-        if (!$wnd.analytics) {
-            return false;
-        }
-        return true;
-    }-*/;
-
-    @Override
-    public void init(PushOptions options) {
-        if (!initialized) {
-            throw new IllegalStateException("you have to initialize Push plugin before using it");
-        }
-        initNative(options);
-    }
-
-    private native void initNative(PushOptions options) /*-{
-        $wnd.push.init(options);
-    }-*/;
+public class WindowsOptions extends JavaScriptObject {
+    protected WindowsOptions() {}
 
 }
