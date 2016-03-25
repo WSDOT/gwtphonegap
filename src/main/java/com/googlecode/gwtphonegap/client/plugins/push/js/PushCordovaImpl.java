@@ -16,7 +16,11 @@
  *
  */
 
-package com.googlecode.gwtphonegap.client.plugins.push;
+package com.googlecode.gwtphonegap.client.plugins.push.js;
+
+import com.googlecode.gwtphonegap.client.plugins.push.EventCallback;
+import com.googlecode.gwtphonegap.client.plugins.push.Push;
+import com.googlecode.gwtphonegap.client.plugins.push.PushOptions;
 
 public class PushCordovaImpl implements Push {
 
@@ -31,7 +35,7 @@ public class PushCordovaImpl implements Push {
     }
 
     private native boolean testForPlugin() /*-{
-        if (!$wnd.analytics) {
+        if (!$wnd.push) {
             return false;
         }
         return true;
@@ -48,5 +52,15 @@ public class PushCordovaImpl implements Push {
     private native void initNative(PushOptions options) /*-{
         $wnd.push.init(options);
     }-*/;
+
+    @Override
+    public void on(String event, EventCallback eventCallback) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void off(String event, EventCallback eventCallback) {
+        // TODO Auto-generated method stub
+    }
 
 }

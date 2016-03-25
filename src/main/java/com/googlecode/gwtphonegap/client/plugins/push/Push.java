@@ -37,4 +37,18 @@ public interface Push extends PhoneGapPlugin {
      */
     public void init(PushOptions options);
 
+    /**
+     *
+     * @param event
+     * @param eventCallback
+     */
+    public void on(String event, EventCallback eventCallback);
+
+    /**
+     *
+     * @param event
+     * @param eventCallback
+     */
+    public void off(String event, EventCallback eventCallback);
+
 }

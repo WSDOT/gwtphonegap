@@ -16,7 +16,11 @@
  *
  */
 
-package com.googlecode.gwtphonegap.client.plugins.push;
+package com.googlecode.gwtphonegap.client.plugins.push.browser;
+
+import com.googlecode.gwtphonegap.client.plugins.push.EventCallback;
+import com.googlecode.gwtphonegap.client.plugins.push.Push;
+import com.googlecode.gwtphonegap.client.plugins.push.PushOptions;
 
 /**
  * Empty implementation for browser
@@ -29,6 +33,14 @@ public class PushBrowserImpl implements Push {
 
     @Override
     public void init(PushOptions options) {
+    }
+
+    @Override
+    public void on(String event, EventCallback eventCallback) {
+    }
+
+    @Override
+    public void off(String event, EventCallback eventCallback) {
     }
 
 }
