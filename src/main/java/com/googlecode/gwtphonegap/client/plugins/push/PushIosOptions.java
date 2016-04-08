@@ -20,8 +20,8 @@ package com.googlecode.gwtphonegap.client.plugins.push;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class IosOptions extends JavaScriptObject {
-    protected IosOptions() {}
+public class PushIosOptions extends JavaScriptObject {
+    protected PushIosOptions() {}
 
     public final native boolean isAlert() /*-{
         return this.alert;

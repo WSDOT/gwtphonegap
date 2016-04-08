@@ -18,32 +18,8 @@
 
 package com.googlecode.gwtphonegap.client.plugins.push;
 
-import com.google.gwt.core.client.JavaScriptObject;
+public interface PushError {
+    
+    public String getMessage();
 
-public class PushOptions extends JavaScriptObject {
-    protected PushOptions() {}
-
-    /**
-     *
-     * @param options  see methods in {@link PushAndroidOptions}
-     */
-    public final native void setAndroid(PushAndroidOptions options) /*-{
-        this.android = object;
-    }-*/;
-
-    /**
-     *
-     * @param options  see methods in {@link PushIosOptions}
-     */
-    public final native void setIos(PushIosOptions options) /*-{
-        this.ios = object;
-    }-*/;
-
-    /**
-     *
-     * @param options  see methods in {@link PushWindowsOptions}
-     */
-    public final native void setWindows(PushWindowsOptions options) /*-{
-        this.windows = options;
-    }-*/;
 }

@@ -18,7 +18,7 @@
 
 package com.googlecode.gwtphonegap.client.plugins.push.browser;
 
-import com.googlecode.gwtphonegap.client.plugins.push.EventCallback;
+import com.googlecode.gwtphonegap.client.plugins.push.PushCallback;
 import com.googlecode.gwtphonegap.client.plugins.push.Push;
 import com.googlecode.gwtphonegap.client.plugins.push.PushOptions;
 
@@ -36,11 +36,11 @@ public class PushBrowserImpl implements Push {
     }
 
     @Override
-    public void on(String event, EventCallback eventCallback) {
+    public void on(String event, PushCallback callback) {
     }
 
     @Override
-    public void off(String event, EventCallback eventCallback) {
+    public void off(String event, PushCallback callback) {
     }
 
 }

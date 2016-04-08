@@ -21,8 +21,8 @@ package com.googlecode.gwtphonegap.client.plugins.push;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
 
-public class AndroidOptions extends JavaScriptObject {
-    protected AndroidOptions() {}
+public class PushAndroidOptions extends JavaScriptObject {
+    protected PushAndroidOptions() {}
 
     public final native String getSenderId() /*-{
         return this.senderID;

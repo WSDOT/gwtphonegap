@@ -16,12 +16,19 @@
  *
  */
 
-package com.googlecode.gwtphonegap.client.plugins.push;
+package com.googlecode.gwtphonegap.client.plugins.push.js;
 
-public interface EventCallback {
-    
-    public void onSuccess(Data data);
-    
-    public void onError();
+import com.google.gwt.core.client.JavaScriptObject;
+import com.googlecode.gwtphonegap.client.plugins.push.PushError;
+
+public class PushErrorJsImpl extends JavaScriptObject implements PushError {
+
+    protected PushErrorJsImpl() {
+    }
+
+    @Override
+    public native String getMessage() /*-{
+        return this.message;
+    }-*/;
 
 }

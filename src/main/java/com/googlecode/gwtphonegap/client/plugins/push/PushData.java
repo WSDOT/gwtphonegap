@@ -20,30 +20,60 @@ package com.googlecode.gwtphonegap.client.plugins.push;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
-public class PushOptions extends JavaScriptObject {
-    protected PushOptions() {}
+public interface PushData {
 
     /**
      *
-     * @param options  see methods in {@link PushAndroidOptions}
+     * @return
      */
-    public final native void setAndroid(PushAndroidOptions options) /*-{
-        this.android = object;
-    }-*/;
+    public String getRegistrationId();
 
     /**
      *
-     * @param options  see methods in {@link PushIosOptions}
+     * @return
      */
-    public final native void setIos(PushIosOptions options) /*-{
-        this.ios = object;
-    }-*/;
+    public String getMessage();
 
     /**
      *
-     * @param options  see methods in {@link PushWindowsOptions}
+     * @return
      */
-    public final native void setWindows(PushWindowsOptions options) /*-{
-        this.windows = options;
-    }-*/;
+    public String getTitle();
+
+    /**
+     *
+     * @return
+     */
+    public String getCount();
+
+    /**
+     *
+     * @return
+     */
+    public String getSound();
+
+    /**
+     *
+     * @return
+     */
+    public String getImage();
+
+    /**
+     *
+     * @return
+     */
+    public JavaScriptObject getAdditionalData();
+
+    /**
+     *
+     * @return
+     */
+    public boolean getAdditionalDataForeground();
+
+    /**
+     *
+     * @return
+     */
+    public boolean getAdditionalDataColdstart();
+
 }

@@ -19,9 +19,9 @@
 package com.googlecode.gwtphonegap.client.plugins.push.js;
 
 import com.google.gwt.core.client.JavaScriptObject;
-import com.googlecode.gwtphonegap.client.plugins.push.Data;
+import com.googlecode.gwtphonegap.client.plugins.push.PushData;
 
-public final class DataJsImpl extends JavaScriptObject implements Data {
+public final class PushDataJsImpl extends JavaScriptObject implements PushData {
 
     @Override
     public native String getRegistrationId() /*-{

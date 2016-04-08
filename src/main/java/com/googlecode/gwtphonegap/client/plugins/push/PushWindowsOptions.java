@@ -20,60 +20,7 @@ package com.googlecode.gwtphonegap.client.plugins.push;
 
 import com.google.gwt.core.client.JavaScriptObject;
 
-public interface Data {
-
-    /**
-     *
-     * @return
-     */
-    public String getRegistrationId();
-
-    /**
-     *
-     * @return
-     */
-    public String getMessage();
-
-    /**
-     *
-     * @return
-     */
-    public String getTitle();
-
-    /**
-     *
-     * @return
-     */
-    public String getCount();
-
-    /**
-     *
-     * @return
-     */
-    public String getSound();
-
-    /**
-     *
-     * @return
-     */
-    public String getImage();
-
-    /**
-     *
-     * @return
-     */
-    public JavaScriptObject getAdditionalData();
-
-    /**
-     *
-     * @return
-     */
-    public boolean getAdditionalDataForeground();
-
-    /**
-     *
-     * @return
-     */
-    public boolean getAdditionalDataColdstart();
+public class PushWindowsOptions extends JavaScriptObject {
+    protected PushWindowsOptions() {}
 
 }

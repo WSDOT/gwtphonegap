@@ -18,7 +18,7 @@
 
 package com.googlecode.gwtphonegap.client.plugins.push.js;
 
-import com.googlecode.gwtphonegap.client.plugins.push.EventCallback;
+import com.googlecode.gwtphonegap.client.plugins.push.PushCallback;
 import com.googlecode.gwtphonegap.client.plugins.push.Push;
 import com.googlecode.gwtphonegap.client.plugins.push.PushOptions;
 
@@ -54,13 +54,21 @@ public class PushCordovaImpl implements Push {
     }-*/;
 
     @Override
-    public void on(String event, EventCallback eventCallback) {
-        // TODO Auto-generated method stub
+    public void on(String event, PushCallback callback) {
+        onNative(event, callback);
     }
 
+    private native void onNative(String event, PushCallback callback) /*-{
+        var success = function(data) {
+        };
+    }-*/;
+
     @Override
-    public void off(String event, EventCallback eventCallback) {
-        // TODO Auto-generated method stub
+    public void off(String event, PushCallback callback) {
+        offNative(event, callback);
     }
+
+    private native void offNative(String event, PushCallback callback) /*-{
+    }-*/;
 
 }

@@ -42,13 +42,13 @@ public interface Push extends PhoneGapPlugin {
      * @param event
      * @param eventCallback
      */
-    public void on(String event, EventCallback eventCallback);
+    public void on(String event, PushCallback callback);
 
     /**
      *
      * @param event
      * @param eventCallback
      */
-    public void off(String event, EventCallback eventCallback);
+    public void off(String event, PushCallback callback);
 
 }

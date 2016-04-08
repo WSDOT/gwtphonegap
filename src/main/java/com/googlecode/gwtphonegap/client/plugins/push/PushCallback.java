@@ -18,9 +18,10 @@
 
 package com.googlecode.gwtphonegap.client.plugins.push;
 
-import com.google.gwt.core.client.JavaScriptObject;
-
-public class WindowsOptions extends JavaScriptObject {
-    protected WindowsOptions() {}
+public interface PushCallback {
+    
+    public void onSuccess(PushData data);
+    
+    public void onError();
 
 }
