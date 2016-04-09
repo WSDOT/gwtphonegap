@@ -23,6 +23,9 @@ import com.googlecode.gwtphonegap.client.plugins.push.PushData;
 
 public final class PushDataJsImpl extends JavaScriptObject implements PushData {
 
+    protected PushDataJsImpl() {
+    }
+    
     @Override
     public native String getRegistrationId() /*-{
         return this.data.registrationId;

@@ -22,7 +22,9 @@ import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayString;
 
 public class PushAndroidOptions extends JavaScriptObject {
-    protected PushAndroidOptions() {}
+
+    protected PushAndroidOptions() {
+    }
 
     public final native String getSenderId() /*-{
         return this.senderID;

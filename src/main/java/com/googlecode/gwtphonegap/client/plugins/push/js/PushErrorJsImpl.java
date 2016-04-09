@@ -27,7 +27,7 @@ public class PushErrorJsImpl extends JavaScriptObject implements PushError {
     }
 
     @Override
-    public native String getMessage() /*-{
+    public final native String getMessage() /*-{
         return this.message;
     }-*/;
 

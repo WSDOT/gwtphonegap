@@ -21,7 +21,9 @@ package com.googlecode.gwtphonegap.client.plugins.push;
 import com.google.gwt.core.client.JavaScriptObject;
 
 public class PushOptions extends JavaScriptObject {
-    protected PushOptions() {}
+
+    protected PushOptions() {
+    }
 
     /**
      *

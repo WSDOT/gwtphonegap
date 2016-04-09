@@ -60,7 +60,10 @@ public class PushCordovaImpl implements Push {
 
     private native void onNative(String event, PushCallback callback) /*-{
         var success = function(data) {
+            callback.@com.googlecode.gwtphonegap.client.plugins.push.PushCallback::onSuccess(Lcom/googlecode/gwtphonegap/client/plugins/push/PushData;)(data);
         };
+        
+        $wnd.push.on($entry(event), $entry(success));
     }-*/;
 
     @Override
